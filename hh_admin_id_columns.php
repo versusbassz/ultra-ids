@@ -2,12 +2,12 @@
 	/*
 	Plugin Name: HH sortable ID columns
 	Plugin URI: http://studio.hamburg-hram.de
-	Description: Enables id columns for all in admin panel.
+	Description: Sortable ID columns for all standard data types in wordpress admin panel.
 	Version: 1.0.0
 	Author: Vladimir Sklyar
 	Author URI: http://imgf.ru
 
-	Based on "Revial IDs" plugin.
+	Minimalistic fork of "Reveal IDs" plugin.
 	*/
 
 
@@ -27,7 +27,6 @@
 
 		global $wp_version;
 		$is_wp_v3_1 = version_compare( $wp_version , '3.0.999' , '>' );
-
 
 		add_filter( 'manage_media_columns' ,       'hh_custom_column_add' );
 		add_action( 'manage_media_custom_column' , 'hh_custom_column_value' , 10 , 2 );
