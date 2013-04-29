@@ -5,7 +5,7 @@
 	Description: Sortable ID columns for all standard data types in wordpress admin panel.
 	Version: 1.0.0
 	Author: Vladimir Sklyar
-	Author URI: http://imgf.ru
+	Author URI: http://studio.hamburg-hram.de
 
 	Minimalistic fork of "Reveal IDs" plugin.
 	*/
