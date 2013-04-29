@@ -1,6 +1,6 @@
 <?php
 	/*
-	Plugin Name: HH admin id columns
+	Plugin Name: HH sortable ID columns
 	Plugin URI: http://studio.hamburg-hram.de
 	Description: Enables id columns for all in admin panel.
 	Version: 1.0.0
@@ -11,7 +11,8 @@
 	*/
 
 
-	if (   function_exists( 'add_action' )
+	if (   is_admin()
+		&& function_exists( 'add_action' )
 		&& function_exists( 'add_filter' )
 		&& function_exists( 'get_taxonomies' )
 		&& function_exists( 'get_post_types' )
@@ -31,11 +32,11 @@
 		add_filter( 'manage_media_columns' ,       'hh_custom_column_add' );
 		add_action( 'manage_media_custom_column' , 'hh_custom_column_value' , 10 , 2 );
 
-//		add_filter( 'manage_link-manager_columns' , 'hh_custom_column_add' );
-//		add_action( 'manage_link_custom_column' , 'column_value' , 10 , 2 );
-//
-//		add_action( 'manage_edit-link-categories_columns' , 'hh_custom_column_add' );
-//		add_filter( 'manage_link_categories_custom_column' , 'column_return_value' , 10 , 3 );
+		add_filter( 'manage_link-manager_columns' , 'hh_custom_column_add' );
+		add_action( 'manage_link_custom_column' , 'column_value' , 10 , 2 );
+
+		add_action( 'manage_edit-link-categories_columns' , 'hh_custom_column_add' );
+		add_filter( 'manage_link_categories_custom_column' , 'column_return_value' , 10 , 3 );
 
 
 		foreach( get_taxonomies() as $taxonomy ) {
