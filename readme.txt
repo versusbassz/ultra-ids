@@ -3,7 +3,7 @@ Contributors: versusbassz
 Tags: sortable, id, column, admin, panel
 Requires at least: 4.6
 Tested up to: 4.7.2
-Stable tag: 1.0.0
+Stable tag: 2.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,16 @@ This plugin contains only functionality for id colums creation ( i.e. deleted op
 
 == Changelog ==
 
-= 1.0.0 =
-* Initial release.
+= 2.0.0 --- 2017.02.24 =
+* Code style changes
+* Change "Tested up to" meta-field to "4.7.2"
+* Change "Requires at least" meta-field to "4.6"
+* Change "Plugin URI" meta-field
+* Change "Author URI" meta-field
+* Remove unnecessary code
+* Change column insert algorithm
+* Add "Differences from "Reveal IDs" plugin" section in readme.txt
+* Add "Plugins with same functionality" section in readme.txt
 
+= 1.0.0 --- 2013.04.30 =
+* Initial release.
