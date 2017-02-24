@@ -11,13 +11,7 @@
 	*/
 
 
-	if (   is_admin()
-		&& function_exists( 'add_action' )
-		&& function_exists( 'add_filter' )
-		&& function_exists( 'get_taxonomies' )
-		&& function_exists( 'get_post_types' )
-		&& function_exists( 'version_compare' )
-	) {
+	if ( is_admin() ) {
 		add_action( 'admin_init' , 'hh_add_custom_columns' );
 		add_action( 'admin_head' , 'hh_add_custom_columns_css' );
 	}
