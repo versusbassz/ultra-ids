@@ -3,7 +3,7 @@ Contributors: versusbassz
 Tags: sortable, id, column, admin, panel
 Requires at least: 4.6
 Tested up to: 4.7.2
-Stable tag: 2.0.0
+Stable tag: 2.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,11 +23,15 @@ This plugin contains only functionality for id colums creation ( i.e. deleted op
 
 = Plugins with same functionality =
 
-<a href="http://wordpress.org/extend/plugins/reveal-ids-for-wp-admin-25/">Reveal IDs</a> &mdash; HH sortable ID columns is fork of this plugin.
-<a href="http://wordpress.org/extend/plugins/codepress-admin-columns/">Codepress Admin Columns</a> &mdash; Complex solution to manage custom columns in admin panel ( not only ID ).
-<a href="http://wordpress.org/extend/plugins/wp-show-ids/">WP Show IDs ( simple, yet elegant )</a> &mdash; Not updated since 2011, but reviews says that it works.
+* <a href="http://wordpress.org/extend/plugins/reveal-ids-for-wp-admin-25/">Reveal IDs</a> &mdash; HH sortable ID columns is fork of this plugin.
+* <a href="http://wordpress.org/extend/plugins/codepress-admin-columns/">Codepress Admin Columns</a> &mdash; Complex solution to manage custom columns in admin panel ( not only ID ).
+* <a href="http://wordpress.org/extend/plugins/wp-show-ids/">WP Show IDs ( simple, yet elegant )</a> &mdash; Not updated since 2011, but reviews says that it works.
 
 == Changelog ==
+
+
+= 2.0.1 --- 2017.02.24 =
+* Fix plugin meta and "Changelog" tab in readme.txt
 
 = 2.0.0 --- 2017.02.24 =
 * Code style changes
