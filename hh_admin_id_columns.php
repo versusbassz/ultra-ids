@@ -28,15 +28,15 @@ function hh_add_custom_columns()
     add_filter('manage_link_categories_custom_column', 'column_return_value', 10, 3);
 
     foreach (get_taxonomies() as $taxonomy) {
-        add_action("manage_edit-${taxonomy}_columns", 'hh_custom_column_add');
-        add_filter("manage_${taxonomy}_custom_column", 'hh_custom_column_return_value', 10, 3);
-        add_filter("manage_edit-${taxonomy}_sortable_columns", 'hh_custom_column_add');
+        add_action("manage_edit-{$taxonomy}_columns", 'hh_custom_column_add');
+        add_filter("manage_{$taxonomy}_custom_column", 'hh_custom_column_return_value', 10, 3);
+        add_filter("manage_edit-{$taxonomy}_sortable_columns", 'hh_custom_column_add');
     }
 
     foreach (get_post_types() as $ptype) {
-        add_action("manage_edit-${ptype}_columns", 'hh_custom_column_add');
-        add_filter("manage_${ptype}_posts_custom_column", 'hh_custom_column_value', 10, 3);
-        add_filter("manage_edit-${ptype}_sortable_columns", 'hh_custom_column_add');
+        add_action("manage_edit-{$ptype}_columns", 'hh_custom_column_add');
+        add_filter("manage_{$ptype}_posts_custom_column", 'hh_custom_column_value', 10, 3);
+        add_filter("manage_edit-{$ptype}_sortable_columns", 'hh_custom_column_add');
     }
 
     add_action('manage_users_columns', 'hh_custom_column_add');
