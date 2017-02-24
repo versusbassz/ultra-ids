@@ -19,9 +19,6 @@
 
 	function hh_add_custom_columns () {
 
-		global $wp_version;
-		$is_wp_v3_1 = version_compare( $wp_version , '3.0.999' , '>' );
-
 		add_filter( 'manage_media_columns' ,       'hh_custom_column_add' );
 		add_action( 'manage_media_custom_column' , 'hh_custom_column_value' , 10 , 2 );
 
@@ -35,34 +32,25 @@
 		foreach( get_taxonomies() as $taxonomy ) {
 			add_action( "manage_edit-${taxonomy}_columns" ,  'hh_custom_column_add' );
 			add_filter( "manage_${taxonomy}_custom_column" , 'hh_custom_column_return_value' , 10 , 3 );
-			if( $is_wp_v3_1 ) {
-				add_filter( "manage_edit-${taxonomy}_sortable_columns" , 'hh_custom_column_add' );
-			}
+			add_filter( "manage_edit-${taxonomy}_sortable_columns" , 'hh_custom_column_add' );
 		}
 
 
 		foreach( get_post_types() as $ptype ) {
 			add_action( "manage_edit-${ptype}_columns" ,        'hh_custom_column_add' );
 			add_filter( "manage_${ptype}_posts_custom_column" , 'hh_custom_column_value' , 10 , 3 );
-			if( $is_wp_v3_1 ) {
-				add_filter( "manage_edit-${ptype}_sortable_columns" , 'hh_custom_column_add' );
-			}
+			add_filter( "manage_edit-${ptype}_sortable_columns" , 'hh_custom_column_add' );
 		}
 
 
 		add_action( 'manage_users_columns' ,       'hh_custom_column_add' );
 		add_filter( 'manage_users_custom_column' , 'hh_custom_column_return_value' , 10 , 3 );
-		if( $is_wp_v3_1 ) {
-			add_filter( "manage_users_sortable_columns" , 'hh_custom_column_add' );
-		}
+		add_filter( "manage_users_sortable_columns" , 'hh_custom_column_add' );
 
 
 		add_action( 'manage_edit-comments_columns' ,  'hh_custom_column_add' );
 		add_action( 'manage_comments_custom_column' , 'hh_custom_column_value' , 10 , 2 );
-		if( $is_wp_v3_1 ) {
-			add_filter( "manage_edit-comments_sortable_columns" , 'hh_custom_column_add' );
-		}
-
+		add_filter( "manage_edit-comments_sortable_columns" , 'hh_custom_column_add' );
 	}
 
 
