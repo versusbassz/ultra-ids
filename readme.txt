@@ -2,7 +2,7 @@
 Contributors: versusbassz
 Tags: sortable, id, column, admin, panel
 Requires at least: 4.6
-Tested up to: 4.7.2
+Tested up to: 4.7.3
 Stable tag: 2.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
