@@ -3,7 +3,7 @@ Contributors: versusbassz
 Tags: sortable, id, column, admin, panel
 Requires at least: 4.6
 Tested up to: 4.7.3
-Stable tag: 2.0.1
+Stable tag: 2.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,8 @@ This plugin contains only functionality for id colums creation ( i.e. deleted op
 
 == Changelog ==
 
+= 2.0.2 --- 2017.03.16 =
+* Fix PHP 5.3 compatibility
 
 = 2.0.1 --- 2017.02.24 =
 * Fix plugin meta and "Changelog" tab in readme.txt
