@@ -51,7 +51,7 @@ function hh_add_custom_columns()
 
 function hh_custom_column_add($columns)
 {
-    $column_id = ['hh_id' => __('ID')];
+    $column_id = array('hh_id' => __('ID'));
 
     $columns   = array_merge(
         (array) array_slice($columns, 0, 1, true),
