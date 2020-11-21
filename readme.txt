@@ -3,7 +3,7 @@ Contributors: versusbassz
 Tags: sortable, id, column, admin, panel
 Requires at least: 4.9
 Tested up to: 5.5
-Stable tag: 2.0.2
+Stable tag: 2.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,6 +28,9 @@ This plugin contains only functionality for id colums creation ( i.e. deleted op
 * <a href="http://wordpress.org/extend/plugins/wp-show-ids/">WP Show IDs ( simple, yet elegant )</a> &mdash; Not updated since 2011, but reviews says that it works.
 
 == Changelog ==
+
+= 2.0.3 --- 2020.11.21 =
+* Checked compatibility with WordPress <= 5.5
 
 = 2.0.2 --- 2017.03.16 =
 * Fix PHP 5.3 compatibility
