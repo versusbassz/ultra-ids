@@ -17,9 +17,12 @@ ID columns will be first in admin panel tables.
 
 = Differences from "Reveal IDs" plugin =
 
-This plugin contains only functionality for id colums creation ( i.e. deleted options page from admin panel and some backward compatibility code ).
+This plugin contains only functionality for id colums creation (i.e. the options page in the admin panel and some backward compatibility code were removed).
 
 "Reveal IDs" code was pretty much rewritten. But the basic functionality remains the same. ID columns will be first in admin panel tables.
+
+= Links =
+<a href="https://github.com/versusbassz/sortable-id-columns/" target="_blank">Github repo</a>
 
 = Plugins with same functionality =
 
