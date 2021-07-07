@@ -1,0 +1,11 @@
+/.wordpress-org
+/.git
+/.github
+/node_modules
+/vendor
+
+.distignore
+.gitignore
+
+.idea
+/custom
