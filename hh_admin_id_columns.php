@@ -84,5 +84,6 @@ function hh_custom_column_return_value($value, $column_name, $id)
 
 function hh_add_custom_columns_css()
 {
-    echo PHP_EOL . '<style type="text/css"> table.widefat th.column-hh_id { width: 50px; } </style>' . PHP_EOL;
+    // 6 chars
+    echo PHP_EOL . '<style type="text/css"> table.widefat th.column-hh_id { width: 65px; } </style>' . PHP_EOL;
 }
