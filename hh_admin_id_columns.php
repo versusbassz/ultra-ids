@@ -3,7 +3,7 @@
 Plugin Name: HH sortable ID columns
 Plugin URI: https://github.com/versusbassz/sortable-id-columns/
 Description: Sortable ID columns for all standard data types in WordPress admin panel.
-Version: 2.0.3
+Version: 2.1.0
 Requires PHP: 5.6
 Author: Vladimir Sklyar
 Author URI: https://versusbassz.com/
@@ -15,7 +15,6 @@ if (is_admin()) {
     add_action('admin_init', 'hh_add_custom_columns');
     add_action('admin_head', 'hh_add_custom_columns_css');
 }
-
 
 function hh_add_custom_columns()
 {
@@ -49,7 +48,6 @@ function hh_add_custom_columns()
     add_filter('manage_edit-comments_sortable_columns', 'hh_custom_column_add');
 }
 
-
 function hh_custom_column_add($columns)
 {
     $column_id = array('hh_id' => __('ID'));
@@ -63,14 +61,12 @@ function hh_custom_column_add($columns)
     return $columns;
 }
 
-
 function hh_custom_column_value($column_name, $id)
 {
     if ($column_name === 'hh_id') {
         echo $id;
     }
 }
-
 
 function hh_custom_column_return_value($value, $column_name, $id)
 {
@@ -80,7 +76,6 @@ function hh_custom_column_return_value($value, $column_name, $id)
 
     return $value;
 }
-
 
 function hh_add_custom_columns_css()
 {

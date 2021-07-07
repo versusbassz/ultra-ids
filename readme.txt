@@ -3,7 +3,7 @@ Contributors: versusbassz
 Tags: sortable, id, column, admin, panel
 Requires at least: 4.9
 Tested up to: 5.7
-Stable tag: 2.0.3
+Stable tag: 2.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,13 @@ This plugin contains only functionality for id colums creation (i.e. the options
 * <a href="http://wordpress.org/extend/plugins/wp-show-ids/">WP Show IDs ( simple, yet elegant )</a> &mdash; Not updated since 2011, but reviews says that it works.
 
 == Changelog ==
+
+= 2.1.0 --- 2021.07.07 =
+* Increase width of the "ID" column: 50px -> 65px , so now it can display 6 chars without a line break (#1)
+* Add the link to the Github repository of the plugin to readme.txt
+* Change "Tested up to" header: 5.5 -> 5.7
+* Update "Requires PHP" header: 5.3 -> 5.6
+* Update "Plugin URI" and "Author URI" links in the entry PHP file
 
 = 2.0.3 --- 2020.11.21 =
 * Checked compatibility with WordPress <= 5.5
