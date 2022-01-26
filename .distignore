@@ -9,3 +9,5 @@
 
 .idea
 /custom
+Makefile
+/tools
