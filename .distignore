@@ -9,5 +9,10 @@
 
 .idea
 /custom
-Makefile
+/tests
 /tools
+
+codeception.yml
+composer.json
+composer.lock
+Makefile

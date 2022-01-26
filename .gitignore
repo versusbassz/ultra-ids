@@ -1,3 +1,10 @@
 .idea
+/vendor
 
 /custom
+
+# codeception + wp-browser
+/tests/_output/*
+!/tests/_output/.keep
+/tests/_support/_generated/*
+!/tests/_support/_generated/.keep
