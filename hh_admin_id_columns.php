@@ -7,8 +7,6 @@ Version: 2.1.0
 Requires PHP: 5.6
 Author: Vladimir Sklyar
 Author URI: https://versusbassz.com/
-
-Minimalistic fork of "Reveal IDs" plugin.
 */
 
 add_action('plugins_loaded', 'hhid_start_plugin');
