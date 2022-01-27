@@ -18,6 +18,18 @@ ID columns will be first in admin panel tables.
 = Links =
 <a href="https://github.com/versusbassz/sortable-id-columns/" target="_blank">Github repo</a>
 
+== Frequently Asked Questions ==
+
+= How to change the width of the column? =
+
+Here is the example of PHP-code that can be pasted (for example in functions.php of your theme, or as a tiny plugin/mu-plugin).
+The current default value is `65px`;
+```
+add_action( 'admin_head', function () {
+	echo PHP_EOL . '<style type="text/css">table.widefat th.column-hh_id { width: 80px !important; } </style>' . PHP_EOL;
+} );
+```
+
 == Changelog ==
 
 = 2.1.0 --- 2021.07.07 =
