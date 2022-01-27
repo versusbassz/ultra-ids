@@ -52,9 +52,9 @@ class Plugin {
 		$column_id = [ self::COLUMN_ID => __( 'ID' ) ];
 
 		$columns = array_merge(
-			(array) array_slice( $columns, 0, 1, true ),
+			array_slice( $columns, 0, 1, true ),
 			$column_id,
-			(array) array_slice( $columns, 1, null, true )
+			array_slice( $columns, 1, null, true )
 		);
 
 		return $columns;
