@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== HH sortable ID columns ===
 Contributors: versusbassz
 Tags: sortable, id, column, admin, panel
 Requires at least: 5.7
