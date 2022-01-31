@@ -12,6 +12,7 @@ Sortable ID columns for all standard data types in WordPress admin panel.
 
 == Description ==
 
+Sortable ID columns for all standard data types in WordPress admin panel.
 No settings pages. It just works.
 ID columns will be first in admin panel tables.
 
