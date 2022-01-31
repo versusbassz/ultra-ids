@@ -3,7 +3,7 @@ Contributors: versusbassz
 Tags: sortable, id, column, admin, panel
 Requires at least: 5.7
 Tested up to: 5.9
-Stable tag: 2.1.0
+Stable tag: 3.0.0
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -31,6 +31,14 @@ add_action( 'admin_head', function () {
 ```
 
 == Changelog ==
+
+= 3.0.0 --- 2022.01.31 =
+* Add the "ID" column for Multisite Blogs and Multisite Users
+* Update "Tested up to" header: 5.5 -> 5.9
+* Update "Requires at least" header: 4.9 -> 5.7
+* Rework the content of readme.txt file
+* Refactor the codebase of the plugin
+* Add automated end-to-end tests for the output of the plugin
 
 = 2.1.0 --- 2021.07.07 =
 * Increase width of the "ID" column: 50px -> 65px , so now it can display 6 chars without a line break (#1)
