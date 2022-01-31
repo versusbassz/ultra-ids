@@ -18,16 +18,30 @@
  * @package WordPress
  */
 
-$is_test_env = getenv( 'XXX_ENV' ) === 'test';
+// Composer
+require '/project/vendor/autoload.php';
 
-$ev_test_domain = 'test.id.docker.local';
+// Dev-env
+$dev_env_domain = 'id.docker.local';
+$dev_env_test_domain = "test.{$dev_env_domain}";
+
+$is_test_env = getenv( 'XXX_ENV' ) === 'test';
+$do_rewrite_of_domain = $is_test_env && isset( $_SERVER['HTTP_HOST'] ) && $_SERVER['HTTP_HOST'] === $dev_env_test_domain;
+
+if ( $is_test_env ) {
+	$dev_env_domain_port = $do_rewrite_of_domain ? '' : ':8000';
+	$dev_env_current_domain = $dev_env_test_domain . $dev_env_domain_port;
+} else {
+	$dev_env_current_domain = "{$dev_env_domain}:8000";
+}
 
 // It's necessary for e2e tests,
-// without this action WP-core redirects internal (port=80) selenuim requests to the port 8000
-if ( $is_test_env && isset( $_SERVER['HTTP_HOST'] ) && $_SERVER['HTTP_HOST'] === $ev_test_domain ) {
-    define( 'WP_HOME', 'http://' . $ev_test_domain );
-    define( 'WP_SITEURL', 'http://' . $ev_test_domain );
-}
+// without this action (in "single site" mode) WP-core redirects internal (port=80) selenuim requests to the port 8000
+//if ( $do_rewrite_of_domain ) {
+//    define( 'WP_HOME', 'http://' . $dev_env_test_domain );
+//    define( 'WP_SITEURL', 'http://' . $dev_env_test_domain );
+//}
+
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
@@ -94,6 +108,21 @@ define( 'WP_DEBUG', true );
 define( 'WP_ENVIRONMENT_TYPE', 'development' );
 
 /* That's all, stop editing! Happy publishing. */
+
+
+// Multisite settings
+define( 'WP_ALLOW_MULTISITE', true );
+define( 'MULTISITE', true );
+define( 'SUBDOMAIN_INSTALL', false );
+$base = '/';
+
+define( 'DOMAIN_CURRENT_SITE', $dev_env_current_domain ); // network
+define( 'PATH_CURRENT_SITE', '/' ); // network
+define( 'SITE_ID_CURRENT_SITE', 1 ); // network
+define( 'BLOG_ID_CURRENT_SITE', 1 ); // network
+
+define( 'SUNRISE', true ); // enable sunrise.php drop-in
+
 
 /** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) ) {

@@ -40,17 +40,20 @@ dev-env--download:
 	rm ./docker-compose.override.yml && \
 	cp ../../tools/dev-env/docker-compose.yml . && \
 	cp ../../tools/dev-env/.env . && \
-	cp ../../tools/dev-env/wp-config.php ../wp-core/
+	cp ../../tools/dev-env/wp-config.php ../wp-core/ && \
+	cp ../../tools/dev-env/sunrise.php ../wp-core/wp-content/
 
 dev-env--install:
 	cd ./custom/dev-env && \
-	make wp 'core install --url="http://id.docker.local:8000/" --title="Dev site" --admin_user="admin" --admin_password="admin" --admin_email="admin@docker.local" --skip-email' && \
-	make wp 'plugin activate hh-sortable' && \
+	\
+	docker-compose exec php wp core multisite-install --url="http://id.docker.local:8000/" --title="Dev site" --admin_user="admin" --admin_password="admin" --admin_email="admin@docker.local" --skip-email --skip-config && \
+	docker-compose exec php wp plugin activate hh-sortable --network && \
 	\
 	docker-compose exec mariadb mysql -uroot -ppassword -e "create database wordpress_test;" && \
 	docker-compose exec mariadb mysql -uroot -ppassword -e "GRANT ALL PRIVILEGES ON wordpress_test.* TO 'wordpress'@'%';" && \
-	docker-compose exec test_php wp core install --url="http://test.id.docker.local:8000/" --title="Testing site" --admin_user="admin" --admin_password="admin" --admin_email="admin@docker.local" --skip-email && \
-	docker-compose exec test_php wp plugin activate hh-sortable
+	\
+	docker-compose exec test_php wp core multisite-install --url="http://test.id.docker.local:8000/" --title="Testing site" --admin_user="admin" --admin_password="admin" --admin_email="admin@docker.local" --skip-email --skip-config && \
+	docker-compose exec test_php wp plugin activate hh-sortable --network
 
 ### Regular commands
 dev-env--start:
