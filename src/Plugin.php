@@ -38,9 +38,25 @@ class Plugin {
 		add_filter( 'manage_users_custom_column', [ __CLASS__, 'return_value' ], 10, 3 );
 		add_filter( 'manage_users_sortable_columns', [ __CLASS__, 'add_column' ] );
 
+		/**
+		 * Multisite Users
+		 *
+		 * @see \WP_MS_Users_List_Table
+		 */
+		add_filter( 'wpmu_users_columns', [ __CLASS__, 'add_column' ] );
+
+		/**
+		 * Comments
+		 */
 		add_action( 'manage_edit-comments_columns', [ __CLASS__, 'add_column' ] );
 		add_action( 'manage_comments_custom_column', [ __CLASS__, 'echo_value' ], 10, 2 );
 		add_filter( 'manage_edit-comments_sortable_columns', [ __CLASS__, 'add_column' ] );
+
+		/**
+		 * Multisite Sites
+		 */
+		add_action( 'manage_sites-network_columns', [ __CLASS__, 'add_column' ] );
+		add_filter( 'manage_sites_custom_column', [ __CLASS__, 'echo_value' ], 100, 2 );
 	}
 
 	public static function add_css() {

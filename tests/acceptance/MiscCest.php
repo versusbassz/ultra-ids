@@ -51,5 +51,15 @@ class MiscCest {
 		$I->amOnPage( '/wp-admin/users.php' );
 		$I->see( 'ID', $th_selector );
 		$I->see( '1', $td_selector );
+
+		// Multisite Blogs
+		$I->amOnPage( '/wp-admin/network/sites.php' );
+		$I->see( 'ID', $th_selector );
+		$I->see( '1', $td_selector );
+
+		// Multisite Users
+		$I->amOnPage( '/wp-admin/network/users.php' );
+		$I->see( 'ID', $th_selector );
+		$I->see( '1', $td_selector );
 	}
 }
