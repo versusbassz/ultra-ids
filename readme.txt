@@ -15,6 +15,14 @@ Sortable ID columns for all standard data types in WordPress admin panel.
 No settings pages. It just works.
 ID columns will be first in admin panel tables.
 
+Supported entities:
+* posts, pages, attachments, any custom post types
+* category, term, any custom taxonomies
+* users (including Multisite users)
+* comments
+* links (the legacy WP feature)
+* blogs (aka "sites") in Multisite Admin panel
+
 = Links =
 <a href="https://github.com/versusbassz/sortable-id-columns/" target="_blank">Github repo</a>
 
