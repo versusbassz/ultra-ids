@@ -3,7 +3,7 @@
 Plugin Name: HH sortable ID columns
 Plugin URI: https://github.com/versusbassz/sortable-id-columns/
 Description: Sortable ID columns for all standard data types in WordPress admin panel.
-Version: 3.0.0
+Version: 4.0.0-alpha
 Requires PHP: 5.6
 Author: Vladimir Sklyar
 Author URI: https://versusbassz.com/
