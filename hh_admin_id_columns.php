@@ -12,7 +12,7 @@ Author URI: https://versusbassz.com/
 add_action('plugins_loaded', 'hhid_start_plugin');
 
 function hhid_start_plugin() {
-	require __DIR__ . '/src/Plugin.php';
+	require_once __DIR__ . '/src/Feature/Column.php';
 
-	add_action('init', [\Versusbassz\IdColumns\Plugin::class, 'init']);
+	add_action('init', [\Versusbassz\IdColumns\Feature\Column::class, 'init']);
 }

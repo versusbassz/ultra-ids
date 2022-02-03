@@ -1,8 +1,8 @@
 <?php
 
-namespace Versusbassz\IdColumns;
+namespace Versusbassz\IdColumns\Feature;
 
-class Plugin {
+class Column {
 	const COLUMN_ID = 'hh_id';
 
 	public static function init() {
