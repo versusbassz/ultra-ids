@@ -8,3 +8,6 @@
 !/tests/e2e/_output/.keep
 /tests/e2e/_support/_generated/*
 !/tests/e2e/_support/_generated/.keep
+
+# wpunit tests
+.phpunit.result.cache

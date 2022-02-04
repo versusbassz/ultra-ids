@@ -7,11 +7,17 @@
         "codeception/module-db": "^1.1",
         "codeception/module-webdriver": "^1.4",
         "codeception/module-phpbrowser": "^1.0",
-        "symfony/var-dumper": "^5.4"
+        "symfony/var-dumper": "^5.4",
+        "yoast/phpunit-polyfills": "^1.0"
     },
     "config": {
         "platform": {
             "php": "7.4.0"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Versusbassz\\IdColumns\\Tests\\": "tests/wpunit/src/"
         }
     }
 }

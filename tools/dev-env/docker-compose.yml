@@ -42,6 +42,7 @@ services:
       - ../../:/var/www/html/wp-content/plugins/hh-sortable:cached
       - ../../tools/mu-plugins/:/var/www/html/wp-content/mu-plugins:cached
       - ../../:/project/:cached
+      - ../../:/project/custom/wp-core/wp-content/plugins/hh-sortable:cached
 ## Alternative for macOS users: Mutagen https://wodby.com/docs/stacks/wordpress/local#docker-for-mac
 #    - wordpress:/var/www/html
 #    # For XHProf and Xdebug profiler traces
@@ -58,6 +59,7 @@ services:
     - ../../:/var/www/html/wp-content/plugins/hh-sortable:cached
     - ../../tools/mu-plugins/:/var/www/html/wp-content/mu-plugins:cached
     - ../../:/project/:cached
+    - ../../:/project/custom/wp-core/wp-content/plugins/hh-sortable:cached
 ## Alternative for macOS users: Mutagen https://wodby.com/docs/stacks/wordpress/local#docker-for-mac
 #    - wordpress:/var/www/html
 
@@ -77,6 +79,7 @@ services:
       - ../../:/var/www/html/wp-content/plugins/hh-sortable:cached
       - ../../tools/mu-plugins/:/var/www/html/wp-content/mu-plugins:cached
       - ../../:/project/:cached
+      - ../../:/project/custom/wp-core/wp-content/plugins/hh-sortable:cached
 ## Alternative for macOS users: Mutagen https://wodby.com/docs/stacks/wordpress/local#docker-for-mac
 #    - wordpress:/var/www/html
     labels:
@@ -108,6 +111,7 @@ services:
       - ../../:/var/www/html/wp-content/plugins/hh-sortable:cached
       - ../../tools/mu-plugins/:/var/www/html/wp-content/mu-plugins:cached
       - ../../:/project/:cached
+      - ../../:/project/custom/wp-core/wp-content/plugins/hh-sortable:cached
   ## Alternative for macOS users: Mutagen https://wodby.com/docs/stacks/wordpress/local#docker-for-mac
   #    - wordpress:/var/www/html
   #    # For XHProf and Xdebug profiler traces
