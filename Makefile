@@ -2,6 +2,10 @@ jjj:
 	@ echo "There is no default task"
 
 ## Tests
+test:
+	make test-wpunit
+	make test-e2e
+
 test-wpunit:
 	cd ./custom/dev-env && \
 	docker-compose exec -w "/project" test_php vendor/bin/phpunit
@@ -26,6 +30,9 @@ dev-env--shell-test:
 dev-env--up:
 	make wp-core-download
 	make wp-tests-lib-download
+	make dev-env--up-quickly
+
+dev-env--up-quickly:
 	make dev-env--download
 	cd ./custom/dev-env && make up
 	@ echo "\nWaiting for mysql..."
