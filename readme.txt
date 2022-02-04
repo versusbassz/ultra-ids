@@ -1,4 +1,4 @@
-=== HH sortable ID columns ===
+=== Ultra IDs ===
 Contributors: versusbassz
 Tags: sortable, id, column, admin, panel
 Requires at least: 5.7
@@ -25,7 +25,7 @@ Supported entities:
 * blogs (aka "sites") in Multisite Admin panel
 
 = Links =
-<a href="https://github.com/versusbassz/sortable-id-columns/" target="_blank">Github repo</a>
+<a href="https://github.com/versusbassz/ultra-ids/" target="_blank">Github repo</a>
 
 == Frequently Asked Questions ==
 

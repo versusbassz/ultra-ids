@@ -1,7 +1,7 @@
 <?php
 /*
-Plugin Name: HH sortable ID columns
-Plugin URI: https://github.com/versusbassz/sortable-id-columns/
+Plugin Name: Ultra IDs
+Plugin URI: https://github.com/versusbassz/ultra-ids/
 Description: Sortable ID columns for all standard data types in WordPress admin panel.
 Version: 4.0.0-alpha
 Requires PHP: 7.4
