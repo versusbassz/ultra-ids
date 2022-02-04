@@ -1,6 +1,6 @@
 <?php
 
-class MiscCest {
+class ColumnCest {
 	public function checkFrontendWorks( AcceptanceTester $I ) {
 		$I->amOnPage( '/' );
 
