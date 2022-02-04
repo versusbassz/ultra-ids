@@ -1,7 +1,7 @@
 <?php
 
 class ColumnCest {
-	public function checkDashboardWorks( AcceptanceTester $I ) {
+	public function checkColumnsWork( AcceptanceTester $I ) {
 		$I->loginAsAdmin();
 		$I->amOnPage( '/wp-admin/index.php' );
 		$I->see( 'At a Glance' );
