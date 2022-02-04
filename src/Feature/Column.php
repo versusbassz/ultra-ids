@@ -1,6 +1,6 @@
 <?php
 
-namespace Versusbassz\IdColumns\Feature;
+namespace Versusbassz\UltraIds\Feature;
 
 class Column {
 	const COLUMN_ID = 'hh_id';

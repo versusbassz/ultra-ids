@@ -1,6 +1,6 @@
 <?php
 
-namespace Versusbassz\IdColumns\Tests;
+namespace Versusbassz\UltraIds\Tests;
 
 const DEBUG = false;
 

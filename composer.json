@@ -17,7 +17,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Versusbassz\\IdColumns\\Tests\\": "tests/wpunit/src/"
+            "Versusbassz\\UltraIds\\Tests\\": "tests/wpunit/src/"
         }
     }
 }

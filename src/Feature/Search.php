@@ -1,8 +1,8 @@
 <?php
 
-namespace Versusbassz\IdColumns\Feature;
+namespace Versusbassz\UltraIds\Feature;
 
-use Versusbassz\IdColumns\Utils;
+use Versusbassz\UltraIds\Utils;
 use WP_Query;
 
 /**

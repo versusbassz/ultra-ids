@@ -1,6 +1,6 @@
 <?php
 
-namespace Versusbassz\IdColumns\Tests;
+namespace Versusbassz\UltraIds\Tests;
 
 class BaseWpTest extends \WP_UnitTestCase {
 	public function testNothing() {
@@ -16,6 +16,6 @@ class BaseWpTest extends \WP_UnitTestCase {
 		$this->assertTrue( function_exists( 'hhid_start_plugin' ) );
 
 		// hhid_start_plugin() call loads all classes of the plugin
-		$this->assertTrue( class_exists( '\\Versusbassz\\IdColumns\\Feature\\Column' ) );
+		$this->assertTrue( class_exists( '\\Versusbassz\\UltraIds\\Feature\\Column' ) );
 	}
 }

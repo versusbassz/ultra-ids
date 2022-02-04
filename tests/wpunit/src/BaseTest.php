@@ -1,10 +1,10 @@
 <?php
 
-namespace Versusbassz\IdColumns\Tests;
+namespace Versusbassz\UltraIds\Tests;
 
 use PHPUnit\Framework\TestCase;
 
-use Versusbassz\IdColumns\Utils;
+use Versusbassz\UltraIds\Utils;
 
 class BaseTest extends TestCase {
 	public function testNothing() {

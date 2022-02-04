@@ -1,6 +1,6 @@
 <?php
 
-namespace Versusbassz\IdColumns;
+namespace Versusbassz\UltraIds;
 
 use \WP_Error;
 
