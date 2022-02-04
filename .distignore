@@ -12,7 +12,10 @@
 /tests
 /tools
 
+.editorconfig
 codeception.yml
 composer.json
 composer.lock
 Makefile
+phpunit.xml
+.phpunit.result.cache
