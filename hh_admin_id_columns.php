@@ -16,7 +16,9 @@ function hhid_start_plugin() {
 
 	require_once __DIR__ . '/src/Feature/Column.php';
 	require_once __DIR__ . '/src/Feature/Search.php';
+	require_once __DIR__ . '/src/Feature/AdminBar.php';
 
 	add_action('init', [\Versusbassz\UltraIds\Feature\Column::class, 'init']);
 	add_action('init', [\Versusbassz\UltraIds\Feature\Search::class, 'init']);
+	add_action('init', [\Versusbassz\UltraIds\Feature\AdminBar::class, 'init']);
 }
