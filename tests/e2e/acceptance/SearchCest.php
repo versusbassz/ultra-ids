@@ -20,7 +20,6 @@ class SearchCest {
 		$I->fillField( $input, '333' );
 		$I->click( '#post-query-submit' );
 
-//		$I->wait( 2 );
 		$I->dontSeeElement( $all_link );
 		$I->seeElement( $input, [ 'value' => '333' ] );
 
@@ -41,5 +40,27 @@ class SearchCest {
 
 		// TODO CPT
 		//
+
+		// Users
+		$I->amOnPage( '/wp-admin/users.php' );
+		$I->seeElement( $input );
+		$I->see( '1', $td_selector );
+
+		// search for a non-existing post
+		$I->fillField( $input, '333' );
+		$I->click( '#search-submit' );
+
+		$I->dontSee( '#search-submit' );
+		$I->dontSee( '1', $td_selector );
+
+		// search for the default user (admin)
+		$I->amOnPage( '/wp-admin/users.php' );
+		$I->seeElement( $input );
+		$I->see( '1', $td_selector );
+
+		$I->fillField( $input, 1 );
+		$I->click( '#search-submit' );
+
+		$I->see( '1', $td_selector );
 	}
 }
