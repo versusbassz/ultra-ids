@@ -67,12 +67,14 @@ dev-env--install:
 	\
 	docker-compose exec php wp core multisite-install --url="http://id.docker.local:8000/" --title="Dev site" --admin_user="admin" --admin_password="admin" --admin_email="admin@docker.local" --skip-email --skip-config && \
 	docker-compose exec php wp plugin activate hh-sortable --network && \
+	docker-compose exec php wp rewrite flush --url=id.docker.local:8000 && \
 	\
 	docker-compose exec mariadb mysql -uroot -ppassword -e "create database wordpress_test;" && \
 	docker-compose exec mariadb mysql -uroot -ppassword -e "GRANT ALL PRIVILEGES ON wordpress_test.* TO 'wordpress'@'%';" && \
 	\
 	docker-compose exec test_php wp core multisite-install --url="http://test.id.docker.local:8000/" --title="Testing site" --admin_user="admin" --admin_password="admin" --admin_email="admin@docker.local" --skip-email --skip-config && \
-	docker-compose exec test_php wp plugin activate hh-sortable --network
+	docker-compose exec test_php wp plugin activate hh-sortable --network && \
+	docker-compose exec test_php wp rewrite flush --url=test.id.docker.local:8000
 
 ### Regular commands
 dev-env--start:

@@ -14,16 +14,24 @@ class AdminBarCest {
 		$I->see( 'One response to' );
 		$I->see( 'Hello world!' );
 		$I->see( 'ID: 1' );
-		$I->wait( 3 );
 
 		// Page
 		$I->amOnPage( '/sample-page/' );
 		$I->see( 'As a new WordPress user' );
 		$I->see( 'ID: 2' );
-		$I->wait( 3 );
 
 		// TODO Test all other necessary entities
 		// CPT
 		// Attachment
+
+		// Author (user)
+		$I->amOnPage( '/blog/author/admin/' );
+		$I->see( 'Author: admin' );
+		$I->see( 'ID: 1' );
+
+		// Term: Category
+		$I->amOnPage( '/blog/category/uncategorized/' );
+		$I->see( 'Category: Uncategorized' );
+		$I->see( 'ID: 1' );
 	}
 }
